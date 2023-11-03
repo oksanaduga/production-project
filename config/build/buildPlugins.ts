@@ -6,6 +6,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
 
   return [
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: paths.html,
     }),
