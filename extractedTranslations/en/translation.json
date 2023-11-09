@@ -2,5 +2,9 @@
   "about": "about",
   "language": "language",
   "main": "main",
-  "notFoundPage": "notFoundPage"
+  "notFoundPage": "notFoundPage",
+  "reloadPage": "reloadPage",
+  "throw error": "throw error",
+  "throwError": "throwError",
+  "unexpectedError": "unexpectedError"
 }
