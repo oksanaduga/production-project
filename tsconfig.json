@@ -37,11 +37,14 @@
       {
         "name": "typescript-plugin-css-modules"
       }
-    ]
+    ],
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "./config/jest/setupTest.ts"
+  ],
 }
