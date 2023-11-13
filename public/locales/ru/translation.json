@@ -3,5 +3,8 @@
   "notFoundPage": "Страница не найдена",
   "unexpectedError": "Что-то пошло не так",
   "reloadPage": "Обновить страницу",
-  "throwError": "Пробросить ошибку"
+  "throwError": "Пробросить ошибку",
+  "shortLang": "ru",
+  "about": "О сайте",
+  "main": "Главная"
 }

@@ -1,7 +1,9 @@
 {
   "about": "about",
+  "aboutPage": "aboutPage",
   "language": "language",
   "main": "main",
+  "mainPage": "mainPage",
   "notFoundPage": "notFoundPage",
   "reloadPage": "reloadPage",
   "throw error": "throw error",
