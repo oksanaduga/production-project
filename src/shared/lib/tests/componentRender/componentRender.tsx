@@ -4,7 +4,6 @@ import { I18nextProvider } from 'react-i18next';
 import i18nForTest from 'shared/config/i18n/i18nForTest';
 
 import { MemoryRouter } from 'react-router-dom';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 export interface ComponentRenderOptions {
     route?: string;
@@ -12,7 +11,7 @@ export interface ComponentRenderOptions {
 
 export function componentRender(component: ReactNode, options: ComponentRenderOptions = {}) {
     const {
-        route = RoutePath.main,
+        route = '/',
     } = options;
 
     return render(
