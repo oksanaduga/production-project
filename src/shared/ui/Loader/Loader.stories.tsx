@@ -8,7 +8,7 @@ export default {
     title: 'shared/Loader',
     component: Loader,
 } as ComponentMeta<typeof Loader>;
-
+// @ts-ignore
 const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
 
 export const Normal = Template.bind({});

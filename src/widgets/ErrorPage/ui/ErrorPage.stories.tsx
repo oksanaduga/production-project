@@ -8,7 +8,7 @@ export default {
     title: 'widget/ErrorPage',
     component: ErrorPage,
 } as ComponentMeta<typeof ErrorPage>;
-
+// @ts-ignore
 const Template: ComponentStory<typeof ErrorPage> = (args) => <ErrorPage {...args} />;
 
 export const Light = Template.bind({});

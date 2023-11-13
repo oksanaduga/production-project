@@ -8,7 +8,7 @@ export default {
     title: 'widget/Navbar',
     component: Navbar,
 } as ComponentMeta<typeof Navbar>;
-
+// @ts-ignore
 const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
 
 export const Light = Template.bind({});

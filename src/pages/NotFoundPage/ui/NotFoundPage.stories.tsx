@@ -8,7 +8,7 @@ export default {
     title: 'pages/NotFoundPage',
     component: NotFoundPage,
 } as ComponentMeta<typeof NotFoundPage>;
-
+// @ts-ignore
 const Template: ComponentStory<typeof NotFoundPage> = (args) => <NotFoundPage {...args} />;
 
 export const Normal = Template.bind({});

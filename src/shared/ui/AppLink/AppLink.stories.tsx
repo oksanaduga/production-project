@@ -11,7 +11,7 @@ export default {
         to: '/',
     },
 } as ComponentMeta<typeof AppLink>;
-
+// @ts-ignore
 const Template: ComponentStory<typeof AppLink> = (args) => <AppLink {...args} />;
 
 export const Primary = Template.bind({});
