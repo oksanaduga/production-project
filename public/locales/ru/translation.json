@@ -7,5 +7,7 @@
   "shortLang": "ru",
   "about": "О сайте",
   "main": "Главная",
-  "login": "Войти"
+  "login": "Войти",
+  "decrement": "уменьшить",
+  "increment": "увеличить"
 }

@@ -7,5 +7,7 @@
   "shortLang": "en",
   "about": "About",
   "main": "Main",
-  "login": "Login"
+  "login": "Login",
+  "decrement": "decrement",
+  "increment": "increment"
 }
