@@ -6,5 +6,6 @@
   "throwError": "throw error",
   "shortLang": "en",
   "about": "About",
-  "main": "Main"
+  "main": "Main",
+  "login": "Login"
 }
