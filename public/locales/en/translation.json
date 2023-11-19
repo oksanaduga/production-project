@@ -9,5 +9,7 @@
   "main": "Main",
   "login": "Login",
   "decrement": "decrement",
-  "increment": "increment"
+  "increment": "increment",
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password"
 }

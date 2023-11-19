@@ -11,5 +11,7 @@
   "reloadPage": "reloadPage",
   "throw error": "throw error",
   "throwError": "throwError",
-  "unexpectedError": "unexpectedError"
+  "unexpectedError": "unexpectedError",
+  "Введите username": "Введите username",
+  "Введите пароль": "Введите пароль"
 }
