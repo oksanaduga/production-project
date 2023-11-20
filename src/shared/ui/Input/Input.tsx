@@ -2,6 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import React, {
     InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react';
+import { INPUT_MAX_LENGTH } from 'app/consts/consts';
 import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
@@ -39,12 +40,20 @@ export const Input = memo((props: InputProps) => {
     };
 
     const onSelect = (e: any) => {
-        setCaretPosition(e?.target?.selectionStart || 0);
+        if (e.target.value.length > INPUT_MAX_LENGTH) {
+            setCaretPosition(INPUT_MAX_LENGTH);
+        } else {
+            setCaretPosition(e?.target?.selectionStart || 0);
+        }
     };
 
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target.value);
-        setCaretPosition(e.target.value.length);
+        if (e.target.value.length > INPUT_MAX_LENGTH) {
+            setCaretPosition(INPUT_MAX_LENGTH);
+        } else {
+            setCaretPosition(e.target.value.length);
+        }
     };
 
     useEffect(() => {

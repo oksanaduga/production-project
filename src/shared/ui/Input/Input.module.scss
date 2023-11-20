@@ -2,6 +2,11 @@
     display: flex;
 }
 
+.caretWrapper {
+    position: relative;
+    flex-grow: 1;
+}
+
 .placeholder {
     margin-right: 5px;
 }
@@ -19,16 +24,11 @@
     }
 }
 
-.caretWrapper {
-    position: relative;
-    flex-grow: 1;
-}
-
 .caret {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 10px;
+    width: 1ch;
     height: 3px;
     background: var(--primary-color);
     animation: blink 0.9s forwards infinite;
