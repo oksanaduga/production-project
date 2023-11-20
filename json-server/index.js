@@ -6,6 +6,18 @@ const server = jsonServer.create();
 
 const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
 
+// const cors = require('cors');
+
+// server.use(
+//     cors({
+//         origin: true,
+//         credentials: true,
+//         preflightContinue: false,
+//         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     }),
+// );
+// server.options('*', cors());
+
 server.use(jsonServer.defaults());
 server.use(jsonServer.bodyParser);
 
@@ -38,9 +50,9 @@ server.post('/login', (req, res) => {
 // проверяем авторизован ли пользователь
 // eslint-disable-next-line consistent-return
 server.use((req, res, next) => {
-    if (!req.headers.authorization) {
-        return res.status(403).json({ message: 'AUTH ERRROR=' });
-    }
+    // if (!req.headers.authorization) {
+    //     return res.status(403).json({ message: 'AUTH ERRROR=' });
+    // }
 
     next();
 });

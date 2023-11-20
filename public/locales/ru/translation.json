@@ -10,6 +10,9 @@
   "login": "Войти",
   "decrement": "уменьшить",
   "increment": "увеличить",
-  "Введите username": "Введите username",
-  "Введите пароль": "Введите пароль"
+  "putUsername": "Введите username",
+  "putPassword": "Введите пароль",
+  "authorizationForm": "Форма авторизации",
+  "loginError": "Вы ввели неверный логин или пароль",
+  "logout": "Выйти"
 }

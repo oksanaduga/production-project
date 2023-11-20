@@ -18,6 +18,14 @@ i18next
         backend: {
             loadPath: '/locales/{{lng}}/{{ns}}.json',
         },
+        // backend: {
+        //     loadPath: () => {
+        //         const isStorybook = window.location.pathname.includes('storybook-static');
+        //         return isStorybook
+        //             ? '/storybook-static/locales/{{lng}}/{{ns}}.json'
+        //             : '/locales/{{lng}}/{{ns}}.json';
+        //     },
+        // },
     });
 
 export default i18next;
