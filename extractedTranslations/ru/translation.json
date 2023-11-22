@@ -3,6 +3,7 @@
   "aboutPage": "aboutPage",
   "authorizationForm": "authorizationForm",
   "decrement": "decrement",
+  "edit": "edit",
   "increment": "increment",
   "language": "language",
   "login": "login",
@@ -11,12 +12,15 @@
   "main": "main",
   "mainPage": "mainPage",
   "notFoundPage": "notFoundPage",
+  "profile": "profile",
   "putPassword": "putPassword",
   "putUsername": "putUsername",
   "reloadPage": "reloadPage",
   "throw error": "throw error",
   "throwError": "throwError",
   "unexpectedError": "unexpectedError",
+  "yourFirstName": "yourFirstName",
+  "yourLastName": "yourLastName",
   "Введите username": "Введите username",
   "Введите пароль": "Введите пароль"
 }
