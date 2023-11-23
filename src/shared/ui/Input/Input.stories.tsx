@@ -17,3 +17,10 @@ Primary.args = {
     value: '123',
     placeholder: 'placeholder',
 };
+
+export const Readonly = Template.bind({});
+Readonly.args = {
+    value: '123',
+    placeholder: 'placeholder',
+    readonly: true,
+};

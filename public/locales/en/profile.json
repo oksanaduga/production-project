@@ -2,5 +2,15 @@
     "profile": "Profile",
     "edit": "Edit",
     "yourFirstName": "Your first name",
-    "yourLastName": "Your last name"
+    "yourLastName": "Your last name",
+    "yourAge": "Your age",
+    "yourCity": "Your city",
+    "yourUsername": "Put username",
+    "yourAvatar": "Put avatar link",
+    "indicateСurrency": "Indicate currency",
+    "indicateСity": "Indicate city",
+    "profileLoadingError": "Something went wrong at loading your profile",
+    "reloadPage": "Reloading page",
+    "cancel": "Cancel",
+    "save": "Save"
 }

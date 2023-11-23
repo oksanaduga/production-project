@@ -1,27 +1,43 @@
 {
-    "posts": [
-        { "id": "1", "title": "json-server", "author": "typicode" },
-        { "id": "2", "title": "json-server2", "author": "typicode" },
-        { "id": "3", "title": "json-server3", "author": "typicode" }
-    ],
-    "comments": [
-        { "id": "1", "body": "some comment", "postId": 1 }
-    ],
-    "users": [
-        {
-            "id": "1",
-            "username": "admin",
-            "password": "123"
-        }
-    ],
-    "profile": {
-        "first": "Oksana",
-        "lastname": "Duga",
-        "age": 29,
-        "currency": "RUB",
-        "country": "Russia",
-        "city": "Saint-P",
-        "username": "admin",
-        "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "json-server2",
+      "author": "typicode"
+    },
+    {
+      "id": "3",
+      "title": "json-server3",
+      "author": "typicode"
     }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123"
+    }
+  ],
+  "profile": {
+    "first": "Oks",
+    "lastname": "Duga",
+    "age": 29,
+    "currency": "RUB",
+    "country": "Kazahstan",
+    "city": "Saint-Petersburg",
+    "username": "admin",
+    "avatar": "https://img.razrisyika.ru/kart/46/600/181925-yabloko-kartinka-dlya-detey-37.jpg"
+  }
 }
