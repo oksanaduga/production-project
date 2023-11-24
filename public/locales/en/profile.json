@@ -12,5 +12,10 @@
     "profileLoadingError": "Something went wrong at loading your profile",
     "reloadPage": "Reloading page",
     "cancel": "Cancel",
-    "save": "Save"
+    "save": "Save",
+    "incorrectAge": "Incorrect age",
+    "incorrectCountry": "Incorrect country",
+    "requiredUserData": "User data required",
+    "requiredData": "data required",
+    "serverError": "Server error"
 }
