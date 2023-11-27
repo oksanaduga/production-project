@@ -1,6 +1,8 @@
 {
   "about": "about",
   "aboutPage": "aboutPage",
+  "articleNotFound": "articleNotFound",
+  "articleServerError": "articleServerError",
   "authorizationForm": "authorizationForm",
   "cancel": "cancel",
   "decrement": "decrement",
