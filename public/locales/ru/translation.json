@@ -16,5 +16,7 @@
   "putPassword": "Введите пароль",
   "authorizationForm": "Форма авторизации",
   "loginError": "Вы ввели неверный логин или пароль",
-  "logout": "Выйти"
+  "logout": "Выйти",
+  "articleComments": "Комментарии",
+  "noComments": "Комментарии отсутствуют"
 }

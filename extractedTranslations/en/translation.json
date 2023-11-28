@@ -1,6 +1,7 @@
 {
   "about": "about",
   "aboutPage": "aboutPage",
+  "articleComments": "articleComments",
   "articleNotFound": "articleNotFound",
   "articleServerError": "articleServerError",
   "authorizationForm": "",
@@ -18,6 +19,7 @@
   "logout": "",
   "main": "main",
   "mainPage": "mainPage",
+  "noComments": "noComments",
   "notFoundPage": "notFoundPage",
   "profile": "profile",
   "profileLoadingError": "profileLoadingError",

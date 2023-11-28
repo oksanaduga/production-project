@@ -16,5 +16,7 @@
   "putPassword": "Enter password",
   "authorizationForm": "Authorization form",
   "loginError": "You entered an incorrect username or password",
-  "logout": "Logout"
+  "logout": "Logout",
+  "articleComments": "Comments",
+  "noComments": "No comments"
 }

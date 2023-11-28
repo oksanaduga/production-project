@@ -5,7 +5,7 @@ import { Input } from 'shared/ui/Input/Input';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
-import { DinamicModuleLoader, ReducersList } from 'shared/lib/components/DinamicModuleLoader/DinamicModuleLoader';
+import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
@@ -50,7 +50,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     }, [dispatch, onSuccess, password, username]);
 
     return (
-        <DinamicModuleLoader
+        <DynamicModuleLoader
             name="loginForm"
             reducers={initialReducers}
             removeAfterUnmount
@@ -82,7 +82,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                     {t('login')}
                 </Button>
             </div>
-        </DinamicModuleLoader>
+        </DynamicModuleLoader>
     );
 });
 

@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo, useCallback, useEffect } from 'react';
-import { DinamicModuleLoader, ReducersList } from 'shared/lib/components/DinamicModuleLoader/DinamicModuleLoader';
+import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
     ProfileCard,
     fetchProfileData,
@@ -19,6 +19,7 @@ import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { ValidateProfileError } from 'entities/Profile/model/types/profile';
 import { useTranslation } from 'react-i18next';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -46,11 +47,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
         [ValidateProfileError.SERVER_ERROR]: t('serverError'),
     };
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData());
-        }
-    }, [dispatch]);
+    useInitialEffect(() => dispatch(fetchProfileData()));
 
     const onChangeFirstname = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ first: value || '' }));
@@ -85,7 +82,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
     }, [dispatch]);
 
     return (
-        <DinamicModuleLoader
+        <DynamicModuleLoader
             name="profile"
             reducers={reducers}
             removeAfterUnmount
@@ -114,7 +111,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
                     readonly={readonly}
                 />
             </div>
-        </DinamicModuleLoader>
+        </DynamicModuleLoader>
     );
 });
 
