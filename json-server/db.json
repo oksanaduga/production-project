@@ -1,5 +1,5 @@
 {
-    "posts": [
+  "posts": [
     {
       "id": "1",
       "title": "json-server",
@@ -102,6 +102,24 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "text": "fgsfd",
+      "userId": "1",
+      "id": "VmRXlJo"
+    },
+    {
+      "articleId": "1",
+      "text": "aaaaa",
+      "userId": "2",
+      "id": "k_7nMVJ"
+    },
+    {
+      "articleId": "1",
+      "text": "hi",
+      "userId": "2",
+      "id": "y25gk0t"
     }
   ],
   "users": [
@@ -114,20 +132,34 @@
     },
     {
       "id": "2",
-      "username": "user",
+      "username": "ivan",
       "password": "123",
       "role": "USER",
-      "avatar": "https://img.razrisyika.ru/kart/46/600/181925-yabloko-kartinka-dlya-detey-37.jpg"
+      "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
     }
   ],
-  "profile": {
-    "first": "Oksana",
-    "lastname": "Duga",
-    "age": 29,
-    "currency": "RUB",
-    "country": "Kazahstan",
-    "city": "Saint-Petersburg",
-    "username": "admin",
-    "avatar": "https://img.razrisyika.ru/kart/46/600/181925-yabloko-kartinka-dlya-detey-37.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Oksana",
+      "lastname": "Duga",
+      "age": 29,
+      "currency": "RUB",
+      "country": "Kazahstan",
+      "city": "Saint-Petersburg",
+      "username": "admin",
+      "avatar": "https://img.razrisyika.ru/kart/46/600/181925-yabloko-kartinka-dlya-detey-37.jpg"
+    },
+    {
+      "id": "2",
+      "first": "ivanq",
+      "lastname": "ivanov",
+      "age": 20,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "ivan",
+      "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
+    }
+  ]
 }

@@ -19,7 +19,7 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
         children,
         name,
         reducers,
-        removeAfterUnmount = false,
+        removeAfterUnmount = true,
     } = props;
 
     const store = useStore() as ReduxStoreWithManager;

@@ -14,6 +14,7 @@ describe('updateProfileData.test', () => {
             country: Country.Armenia,
             city: 'city',
             username: 'admin',
+            id: '1',
         };
 
         const thunk = new TestAsyncThunk(updateProfileData, {
@@ -40,6 +41,7 @@ describe('updateProfileData.test', () => {
             country: Country.Armenia,
             city: 'city',
             username: 'admin',
+            id: '1',
         };
 
         const thunk = new TestAsyncThunk(updateProfileData, {
@@ -66,6 +68,7 @@ describe('updateProfileData.test', () => {
             country: Country.Armenia,
             city: 'city',
             username: 'admin',
+            id: '1',
         };
 
         const thunk = new TestAsyncThunk(updateProfileData, {

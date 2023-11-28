@@ -22,7 +22,6 @@ export const fetchCommentsByArticleId = createAsyncThunk<Comment[], string | und
             if (!response.data) {
                 throw new Error();
             }
-            console.log('response.data', response.data);
 
             return response.data;
         } catch (e) {
