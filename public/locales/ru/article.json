@@ -1,4 +1,6 @@
 {
     "articleNotFound": "Статья не найдена",
-    "articleServerError": "При загрузке статьи произошла ошибка"
+    "articleServerError": "При загрузке статьи произошла ошибка",
+    "readMore": "Читать далее...",
+    "backToList": "Назад к списку"
 }

@@ -1,4 +1,6 @@
 {
     "articleNotFound": "Article not Found",
-    "articleServerError": "Article server error"
+    "articleServerError": "Article server error",
+    "readMore": "Read more...",
+    "backToList": "Back to list"
 }

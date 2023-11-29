@@ -1,4 +1,7 @@
 {
+  "articleComments": "",
   "articleNotFound": "",
-  "articleServerError": ""
+  "articleServerError": "",
+  "backToList": "",
+  "readMore": ""
 }
