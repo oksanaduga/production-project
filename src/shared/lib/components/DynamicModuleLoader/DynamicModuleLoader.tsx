@@ -45,6 +45,9 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
     }, []);
 
     return (
-        <div>{children}</div>
+    // eslint-disable-next-line react/jsx-no-useless-fragment
+        <>
+            {children}
+        </>
     );
 };

@@ -5,7 +5,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import AddCommentForm from './AddCommentForm';
 
 export default {
-    title: 'feature/AddCommentForm',
+    title: 'features/AddCommentForm',
     component: AddCommentForm,
 } as ComponentMeta<typeof AddCommentForm>;
 
