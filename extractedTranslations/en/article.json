@@ -3,5 +3,6 @@
   "articleNotFound": "",
   "articleServerError": "",
   "backToList": "",
-  "readMore": ""
+  "readMore": "",
+  "unexpectedError": ""
 }

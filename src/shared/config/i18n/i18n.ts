@@ -44,7 +44,7 @@ i18n
     // lng: 'en',
         fallbackLng: 'en',
         // debug: __IS_DEV__,
-        debug: true,
+        debug: false,
         load: 'languageOnly',
 
         interpolation: {

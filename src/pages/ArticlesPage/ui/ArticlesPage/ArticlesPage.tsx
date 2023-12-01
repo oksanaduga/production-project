@@ -7,13 +7,13 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Page } from 'shared/ui/Page/Page';
+import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
+import { initeArticlesPage } from '../../model/services/initeArticlesPage/initeArticlesPage';
 import { articlesPageActions, articlesPageReducer, getArticles } from '../../model/slice/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
-import { fetchArticlesList } from '../../model/services/fetchArticleList/fetchArticlesList';
 import {
     getArticlesPageError,
     getArticlesPageIsLoading,
-    getArticlesPageNum,
     getArticlesPageView,
 } from '../../model/selectors/articlePageSelectors';
 import { fetchNextArticlePage } from '../../model/services/fetchNextArticlePage/fetchNextArticlePage';
@@ -28,7 +28,6 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const isLoading = useSelector(getArticlesPageIsLoading);
     const error = useSelector(getArticlesPageError);
     const view = useSelector(getArticlesPageView);
-    const page = useSelector(getArticlesPageNum);
 
     const reducers: ReducersList = {
         articlesPage: articlesPageReducer,
@@ -39,10 +38,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(articlesPageActions.initState());
-        dispatch(fetchArticlesList({
-            page,
-        }));
+        dispatch(initeArticlesPage());
     });
 
     const onChangeView = useCallback((view: ArticleView) => {
@@ -50,10 +46,21 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
         dispatch(articlesPageActions.initState());
     }, [dispatch]);
 
+    if (error) {
+        return (
+            <Text
+                title={t('unexpectedError')}
+                align={TextAlign.CENTER}
+                theme={TextTheme.ERROR}
+            />
+        );
+    }
+
     return (
         <DynamicModuleLoader
             name="articlesPage"
             reducers={reducers}
+            removeAfterUnmount={false}
         >
             <Page
                 onScrollEnd={onLoadNextPart}
