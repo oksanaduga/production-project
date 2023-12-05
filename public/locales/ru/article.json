@@ -4,5 +4,7 @@
     "readMore": "Читать далее...",
     "backToList": "Назад к списку",
     "unexpectedError": "Что-то пошло не так, попробуйте обновить страницу",
-    "notFoundArticles": "Статьи не найдены"
+    "notFoundArticles": "Статьи не найдены",
+    "articleComments": "Комментарии",
+    "recommend": "Рекомендуем"
 }

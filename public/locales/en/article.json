@@ -4,5 +4,7 @@
     "readMore": "Read more...",
     "backToList": "Back to list",
     "unexpectedError": "Something went wrong, try to reload page",
-    "notFoundArticles": "Articles not found"
+    "notFoundArticles": "Articles not found",
+    "articleComments": "Comments",
+    "recommend": "Recommend"
 }
