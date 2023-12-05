@@ -6,7 +6,7 @@ import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll/useInfinit
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { UIActions, getUIScrollByPath } from 'features/UI';
 import { useLocation } from 'react-router-dom';
-import { useInitialEffect, useInitialLayoutEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useInitialLayoutEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useSelector } from 'react-redux';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
@@ -49,7 +49,7 @@ export const Page = (props: PageProps) => {
             onScroll={onScroll}
         >
             {children}
-            <div ref={triggerRef} />
+            {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
         </section>
     );
 };

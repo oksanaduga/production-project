@@ -9,23 +9,25 @@ describe('initeArticlesPage.test', () => {
         const thunk = new TestAsyncThunk(initeArticlesPage, {
             articlesPage: {
                 _inited: false,
+                page: 1,
             },
         });
 
-        await thunk.callThunk();
+        await thunk.callThunk(undefined);
 
         expect(thunk.dispatch).toBeCalledTimes(4); // two dispatch at action + pending + fullfield
-        expect(fetchArticlesList).toHaveBeenCalledWith({ page: 1 });
+        expect(fetchArticlesList).toHaveBeenCalledWith({});
     });
 
     test('initeArticlesPage not called', async () => {
         const thunk = new TestAsyncThunk(initeArticlesPage, {
             articlesPage: {
                 _inited: true,
+                page: 1,
             },
         });
 
-        await thunk.callThunk();
+        await thunk.callThunk(undefined);
 
         expect(thunk.dispatch).toBeCalledTimes(2); // pending + fullfield
         expect(fetchArticlesList).not.toHaveBeenCalled();

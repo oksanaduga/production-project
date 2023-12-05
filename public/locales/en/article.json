@@ -3,5 +3,6 @@
     "articleServerError": "Article server error",
     "readMore": "Read more...",
     "backToList": "Back to list",
-    "unexpectedError": "Something went wrong, try to reload page"
+    "unexpectedError": "Something went wrong, try to reload page",
+    "notFoundArticles": "Articles not found"
 }
