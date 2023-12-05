@@ -6,5 +6,8 @@
     "unexpectedError": "Something went wrong, try to reload page",
     "notFoundArticles": "Articles not found",
     "articleComments": "Comments",
-    "recommend": "Recommend"
+    "recommend": "Recommend",
+    "editArticle": "Edit",
+    "editArticlePage": "Edit article id=",
+    "createArticlePage": "Create article"
 }

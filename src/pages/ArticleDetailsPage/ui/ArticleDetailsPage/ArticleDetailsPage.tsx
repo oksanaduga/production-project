@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { ArticleDetails, ArticleList } from 'entities/Article';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';
 import { CommentList } from 'entities/Comment';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
@@ -10,8 +10,6 @@ import { useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { AddCommentForm } from 'features/AddCommentForm';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Page } from 'widgets/Page/Page';
 import cls from './ArticleDetails.module.scss';
 import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlice';
@@ -26,6 +24,7 @@ import {
     fetchArticlesRecommendations,
 } from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
 import { articleDetailsPageReducer } from '../../model/slice';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -41,7 +40,6 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const recommendationsIsLoading = useSelector(getArticleDetailsPageRecomendationsIsLoading);
 
     const dispatch = useAppDispatch();
-    const navigate = useNavigate();
 
     const reducers: ReducersList = {
         articleDetailsPage: articleDetailsPageReducer,
@@ -55,10 +53,6 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const onSendComment = useCallback((value: string) => {
         dispatch(addCommentForArticle(value));
     }, [dispatch]);
-
-    const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles);
-    }, [navigate]);
 
     if (!id) {
         return (
@@ -78,12 +72,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
             removeAfterUnmount
         >
             <Page className={classNames('', {}, [className])}>
-                <Button
-                    theme={ButtonTheme.OUTLINE}
-                    onClick={onBackToList}
-                >
-                    {t('backToList')}
-                </Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
                 <Text
                     size={TextSize.L}

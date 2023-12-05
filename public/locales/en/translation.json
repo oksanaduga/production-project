@@ -18,5 +18,7 @@
   "loginError": "You entered an incorrect username or password",
   "logout": "Logout",
   "articleComments": "Comments",
-  "noComments": "No comments"
+  "noComments": "No comments",
+  "appName": "App Name",
+  "createArticle": "Create article"
 }

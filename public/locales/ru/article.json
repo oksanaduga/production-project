@@ -6,5 +6,8 @@
     "unexpectedError": "Что-то пошло не так, попробуйте обновить страницу",
     "notFoundArticles": "Статьи не найдены",
     "articleComments": "Комментарии",
-    "recommend": "Рекомендуем"
+    "recommend": "Рекомендуем",
+    "editArticle": "Редактировать",
+    "editArticlePage": "Редактирование статьи id=",
+    "createArticlePage": "Создание статьи"
 }

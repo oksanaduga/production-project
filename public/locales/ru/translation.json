@@ -18,5 +18,7 @@
   "loginError": "Вы ввели неверный логин или пароль",
   "logout": "Выйти",
   "articleComments": "Комментарии",
-  "noComments": "Комментарии отсутствуют"
+  "noComments": "Комментарии отсутствуют",
+  "appName": "App Name",
+  "createArticle": "Создать статью"
 }
