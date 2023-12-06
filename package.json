@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --env port=3000",
     "start:dev": "concurrently \"npm start\" \"npm run start:dev:server\"",
-    "build:prod": "webpack  --env mode=production apiUrl=https://production-ptoject-server-6kzwcslb7-oksanaduga.vercel.app",
+    "build:prod": "webpack  --env mode=production apiUrl=https://production-ptoject-server.vercel.app",
     "build:dev": "webpack  --env mode=development",
     "start:dev:server": "node ./json-server/index.js",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
