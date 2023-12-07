@@ -10,6 +10,7 @@ import { useInitialLayoutEffect } from 'shared/lib/hooks/useInitialEffect/useIni
 import { useSelector } from 'react-redux';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
+import { PAGE_ID } from 'app/consts/consts';
 import cls from './Page.module.scss';
 
 interface PageProps {
@@ -47,6 +48,7 @@ export const Page = (props: PageProps) => {
             ref={wrapperRef}
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScroll}
+            id={PAGE_ID}
         >
             {children}
             {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
