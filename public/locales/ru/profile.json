@@ -8,7 +8,7 @@
     "yourUsername": "Введите имя пользователя",
     "yourAvatar": "Введите ссылку на аватар",
     "indicateСurrency": "Укажите валюту",
-    "indicateСity": "Укажите город",
+    "indicateСountry": "Укажите страну",
     "profileLoadingError": "Произошла ошибка при загрузке профиля",
     "reloadPage": "Попробуйте перезагрузить страницу",
     "cancel": "Отменить",
