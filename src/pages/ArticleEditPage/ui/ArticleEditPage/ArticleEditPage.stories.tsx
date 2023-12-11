@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { MemoryRouter, Route, reactRouterParameters } from 'react-router-dom';
+// import { MemoryRouter, Route, reactRouterParameters } from 'react-router-dom';
 import ArticleEditPage from './ArticleEditPage';
 
 export default {

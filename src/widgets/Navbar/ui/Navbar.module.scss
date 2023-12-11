@@ -7,7 +7,8 @@
     background: var(--inverted-bg-color);
 }
 
-.links {
+.links,
+.dropdown {
     margin-left: auto;
 }
 
@@ -18,4 +19,24 @@
 .appName {
     margin-left: 15px;
     width: var(--sidebar-width);
+}
+
+.optionBottomLeft {
+    right: 0;
+    top: 100%;
+}
+
+.optionBottomRight {
+    left: 0;
+    top: 100%;
+}
+
+.optionTopLeft {
+    right: 0;
+    bottom: 100%;
+}
+
+.optionTopRight {
+    left: 0;
+    bottom: 100%;
 }

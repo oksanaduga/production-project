@@ -36,6 +36,22 @@
     left: 1px;
 }
 
-.optionTop {
+.optionBottomLeft {
+    right: 0;
+    top: 100%;
+}
+
+.optionBottomRight {
+    left: 0;
+    top: 100%;
+}
+
+.optionTopLeft {
+    right: 0;
+    bottom: 100%;
+}
+
+.optionTopRight {
+    left: 0;
     bottom: 100%;
 }

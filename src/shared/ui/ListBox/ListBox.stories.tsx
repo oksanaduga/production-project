@@ -5,18 +5,17 @@ import { ListBox, ListBoxItem } from './ListBox';
 export default {
     title: 'shared/ListBox',
     component: ListBox,
+    decorators: [
+        (Story) => <div style={{ padding: '100px' }}><Story /></div>,
+    ],
 } as ComponentMeta<typeof ListBox>;
 
-const Template: ComponentStory<typeof ListBox> = (args) => (
-    <div style={{ paddingTop: '200px' }}>
-        <ListBox {...args} />
-    </div>
-);
+const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />;
 
 const options: ListBoxItem[] = [
-    { value: '1', content: 'one' },
-    { value: '2', content: 'two' },
-    { value: '3', content: 'three', disabled: true },
+    { value: '1', content: 'oneoneoneoneone' },
+    { value: '2', content: 'twotwotwotwotwo' },
+    { value: '3', content: 'threethreethreethree', disabled: true },
 ];
 
 export const Normal = Template.bind({});
@@ -36,11 +35,38 @@ ReadOnly.args = {
     readonly: true,
 };
 
-export const DirectionTop = Template.bind({});
-DirectionTop.args = {
+export const DirectionTopLeft = Template.bind({});
+DirectionTopLeft.args = {
     value: 'value',
     onChange: () => {},
     label: 'label',
     items: options,
-    direction: 'top',
+    direction: 'top left',
+};
+
+export const DirectionTopRight = Template.bind({});
+DirectionTopRight.args = {
+    value: 'value',
+    onChange: () => {},
+    label: 'label',
+    items: options,
+    direction: 'top right',
+};
+
+export const DirectionBottomLeft = Template.bind({});
+DirectionBottomLeft.args = {
+    value: 'value',
+    onChange: () => {},
+    label: 'label',
+    items: options,
+    direction: 'bottom left',
+};
+
+export const DirectionBottomRight = Template.bind({});
+DirectionBottomRight.args = {
+    value: 'value',
+    onChange: () => {},
+    label: 'label',
+    items: options,
+    direction: 'bottom right',
 };
