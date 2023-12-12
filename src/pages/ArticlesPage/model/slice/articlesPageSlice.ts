@@ -90,6 +90,7 @@ export const articlesPageSlice = createSlice({
             .addCase(fetchArticlesList.rejected, (state, action) => {
                 state.error = action.payload;
                 state.isLoading = false;
+                state.hasMore = false;
             });
     },
 });
