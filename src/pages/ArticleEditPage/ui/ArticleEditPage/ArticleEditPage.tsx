@@ -13,6 +13,7 @@ const ArticleEditPage = memo((props: ArticleEditPageProps) => {
 
     const { t } = useTranslation('article');
     const { id } = useParams<{ id: string }>();
+    console.log('id', id);
     const isEdit = Boolean(id);
 
     return (

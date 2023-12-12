@@ -1,6 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-// import { MemoryRouter, Route, reactRouterParameters } from 'react-router-dom';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import ArticleEditPage from './ArticleEditPage';
 
 export default {
@@ -12,6 +11,22 @@ const Template: ComponentStory<typeof ArticleEditPage> = (args) => <ArticleEditP
 
 export const Normal = Template.bind({});
 Normal.args = {};
+Normal.decorators = [StoreDecorator({})];
+
+export const EditArticle = Template.bind({});
+EditArticle.args = {};
+EditArticle.decorators = [StoreDecorator({})];
+// EditArticle.decorators = [RouterDecorator('/article/7')];
+// EditArticle.parameters = {
+//     reactRouter: reactRouterParameters({
+//       location: {
+//         pathParams: { userId: '42' },
+//       },
+//       routing: { path: '/users/:userId' },
+//     }),
+
+// addDecorator(RouterDecorator);
+
 // Normal.parameters = {
 //     reactRouter: reactRouterParameters({
 //         location: {
@@ -20,12 +35,3 @@ Normal.args = {};
 //         routing: { path: '/users/:userId' },
 //     }),
 // };
-
-// Normal.decorators = [
-//     (Story) => (
-//         <MemoryRouter initialEntries={['articles/7/edit']}>
-//             <Route path="/articles/:myId/edit">
-//                 <Story />
-//             </Route>
-//         </MemoryRouter>
-//     )];

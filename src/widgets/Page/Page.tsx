@@ -4,7 +4,7 @@ import {
 } from 'react';
 import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { UIActions, getUIScrollByPath } from 'features/UI';
+import { UIActions, getUIScrollByPath } from 'features/ui';
 import { useLocation } from 'react-router-dom';
 import { useInitialLayoutEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useSelector } from 'react-redux';
