@@ -74,6 +74,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                                 theme={ButtonTheme.OUTLINE}
                             >
                                 {t('readMore')}
+                                asd
                             </Button>
                         </AppLink>
                         {views}

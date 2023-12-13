@@ -1,0 +1,21 @@
+{
+  "cancel": "cancel",
+  "edit": "edit",
+  "incorrectAge": "incorrectAge",
+  "incorrectCountry": "incorrectCountry",
+  "indicateСountry": "indicateСountry",
+  "indicateСurrency": "indicateСurrency",
+  "profile": "profile",
+  "profileLoadingError": "profileLoadingError",
+  "reloadPage": "reloadPage",
+  "requiredData": "requiredData",
+  "requiredUserData": "requiredUserData",
+  "save": "save",
+  "serverError": "serverError",
+  "yourAge": "yourAge",
+  "yourAvatar": "yourAvatar",
+  "yourCity": "yourCity",
+  "yourFirstName": "yourFirstName",
+  "yourLastName": "yourLastName",
+  "yourUsername": "yourUsername"
+}

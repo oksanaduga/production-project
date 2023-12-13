@@ -7,5 +7,8 @@ export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelecto
 export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
 export { getArticleDetailsData } from './model/selectors/articleDetails';
 export { ArticleCodeBlockComponent } from './ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
-export { ArticleSortField } from './model/consts/consts';
-export { ArticleView, ArticleType } from './model/consts/consts';
+export {
+    ArticleView,
+    ArticleType,
+    ArticleSortField,
+} from './model/consts/consts';

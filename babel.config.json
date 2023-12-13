@@ -6,7 +6,7 @@
       {
         "runtime": "automatic"
       }
-    ]
+    ],
   ],
-  "plugins": ["i18next-extract"]
+  "plugins": ["i18next-extract", "@babel/plugin-transform-typescript", "@babel/plugin-transform-runtime"]
 }

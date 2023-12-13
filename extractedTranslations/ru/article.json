@@ -1,0 +1,10 @@
+{
+  "articleServerError": "articleServerError",
+  "backToList": "backToList",
+  "createArticlePage": "createArticlePage",
+  "editArticle": "editArticle",
+  "editArticlePage": "editArticlePage",
+  "notFoundArticles": "notFoundArticles",
+  "readMore": "readMore",
+  "unexpectedError": "unexpectedError"
+}
