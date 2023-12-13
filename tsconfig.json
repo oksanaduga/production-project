@@ -39,6 +39,7 @@
         "name": "typescript-plugin-css-modules"
       }
     ],
+    "isolatedModules": true
   },
   "ts-node": {
     "compilerOptions": {

@@ -1,7 +1,8 @@
 import { ArticleDetailsSchema } from '../types/ArticleDetailsSchema';
 import { articleDetailsReducer } from './articleDetailsSlice';
 import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById';
-import { Article, ArticleType, ArticleBlockType } from '../types/article';
+import { Article } from '../types/article';
+import { ArticleType, ArticleBlockType } from '../consts/consts';
 
 describe('articleDetailsSlice.test', () => {
     test('test articleDetails pending', () => {

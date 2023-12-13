@@ -1,8 +1,7 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { Currency } from 'entities/Currency';
-import { Country } from 'entities/Country';
 import { getArticleDetailsData, getArticleDetailsIsLoading, getArticleDetailsError } from './articleDetails';
-import { ArticleType, ArticleBlockType, Article } from '../types/article';
+import { Article } from '../types/article';
+import { ArticleType, ArticleBlockType } from '../consts/consts';
 
 describe('getArticleDetailsData', () => {
     test('should return article details data', () => {

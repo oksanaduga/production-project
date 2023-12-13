@@ -1,6 +1,6 @@
 import { StateSchema } from 'app/providers/StoreProvider';
 import { createSelector } from 'reselect';
-import { UserRole } from '../types/user';
+import { UserRole } from '../consts/consts';
 
 export const getUserRoles = (state: StateSchema) => state.user.authData?.roles;
 
