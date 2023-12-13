@@ -21,5 +21,7 @@
   "noComments": "Комментарии отсутствуют",
   "appName": "App Name",
   "createArticle": "Создать статью",
-  "userProfile": "Профиль"
+  "userProfile": "Профиль",
+  "admin": "Админка",
+  "accessDenied": "У вас нет доступа до этой страницы"
 }

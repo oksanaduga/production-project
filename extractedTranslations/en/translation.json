@@ -1,6 +1,8 @@
 {
   "about": "about",
   "aboutPage": "aboutPage",
+  "accessDenied": "accessDenied",
+  "admin": "admin",
   "allArticles": "allArticles",
   "appName": "appName",
   "articleComments": "articleComments",

@@ -21,5 +21,7 @@
   "noComments": "No comments",
   "appName": "App Name",
   "createArticle": "Create article",
-  "userProfile": "Profile"
+  "userProfile": "Profile",
+  "admin": "Admin",
+  "accessDenied": "You do not have access to this page"
 }

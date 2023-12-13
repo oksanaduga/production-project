@@ -12,6 +12,7 @@ import { Card } from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
+import { HStack } from 'shared/ui/Stack';
 import { fetchArticlesList } from '../../model/services/fetchArticleList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slice/articlesPageSlice';
 import {
@@ -73,8 +74,11 @@ export const ArticlePageFilters = memo((props: ArticlePageFiltersProps) => {
     }, [dispatch, fetchData]);
 
     return (
-        <div className={classNames(cls.ArticlePageFilters, {}, [className])}>
-            <div className={cls.sortWrapper}>
+        <>
+            <HStack
+                max
+                justify="between"
+            >
                 <ArticleSortSelector
                     order={order}
                     sort={sort}
@@ -85,7 +89,7 @@ export const ArticlePageFilters = memo((props: ArticlePageFiltersProps) => {
                     view={view}
                     onViewClick={onChangeView}
                 />
-            </div>
+            </HStack>
             <Card className={cls.search}>
                 <Input
                     placeholder={t('search')}
@@ -98,6 +102,6 @@ export const ArticlePageFilters = memo((props: ArticlePageFiltersProps) => {
                 onChangeType={onChangeType}
                 className={cls.tabs}
             />
-        </div>
+        </>
     );
 });

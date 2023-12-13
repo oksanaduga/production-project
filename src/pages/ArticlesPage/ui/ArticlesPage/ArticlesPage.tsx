@@ -47,7 +47,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
                 onScrollEnd={onLoadNextPart}
                 className={classNames(cls.ArticlesPage, {}, [className])}
             >
-                <VStack gap="8">
+                <VStack gap="16">
                     <ArticlePageFilters />
                     <ArticleInfiniteList />
                 </VStack>

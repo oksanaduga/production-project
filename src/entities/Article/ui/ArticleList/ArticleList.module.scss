@@ -1,4 +1,8 @@
 .BIG {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
     .card {
         margin-bottom: 30px;
     }

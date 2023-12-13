@@ -625,6 +625,18 @@
       "text": "asddsFsfd",
       "userId": "1",
       "id": "RL-cRV5"
+    },
+    {
+      "articleId": "7",
+      "text": "",
+      "userId": "1",
+      "id": "toaDGDi"
+    },
+    {
+      "articleId": "7",
+      "text": "sdf",
+      "userId": "1",
+      "id": "8ap6cLZ"
     }
   ],
   "users": [
@@ -632,14 +644,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://img.razrisyika.ru/kart/46/600/181925-yabloko-kartinka-dlya-detey-37.jpg"
     },
     {
       "id": "2",
       "username": "ivan",
       "password": "123",
-      "role": "USER",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
     }
   ],
