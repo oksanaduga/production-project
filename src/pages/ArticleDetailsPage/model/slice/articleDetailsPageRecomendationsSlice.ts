@@ -1,4 +1,5 @@
 import {
+    EntityId,
     PayloadAction,
     createEntityAdapter,
     createSlice,
@@ -15,7 +16,7 @@ const initialState: ArticleDetailsPageRecomendationsSchema = {
     entities: {},
 };
 
-export const recommendationsAdapter = createEntityAdapter<Article>({
+export const recommendationsAdapter = createEntityAdapter<Article, EntityId>({
     selectId: (article) => article.id,
 });
 

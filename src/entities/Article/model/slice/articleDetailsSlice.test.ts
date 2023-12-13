@@ -9,7 +9,7 @@ describe('articleDetailsSlice.test', () => {
             isLoading: false,
             error: 'error',
         };
-
+        // @ts-ignore
         expect(articleDetailsReducer(state as ArticleDetailsSchema, fetchArticleById.pending))
             .toEqual({
                 isLoading: true,

@@ -1,4 +1,5 @@
 import {
+    EntityId,
     PayloadAction,
     createEntityAdapter,
     createSlice,
@@ -28,8 +29,8 @@ const initialState: ArticlesPageSchema = {
     type: ArticleType.ALL,
 };
 
-export const articlesAdapter = createEntityAdapter<Article>({
-    selectId: (article) => article.id,
+export const articlesAdapter = createEntityAdapter<Article, EntityId>({
+    selectId: (article: { id: EntityId; }) => article.id,
 });
 
 export const getArticles = articlesAdapter.getSelectors<StateSchema>(

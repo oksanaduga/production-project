@@ -38,7 +38,7 @@ export const ListBox = (props: ListBoxProps) => {
         defaultValue,
         onChange,
         label,
-        readonly,
+        readonly = true,
         direction = 'bottom right',
     } = props;
 
@@ -62,6 +62,7 @@ export const ListBox = (props: ListBoxProps) => {
             >
 
                 <HListbox.Button
+                    // @ts-ignore
                     disabled={readonly}
                     className={cls.trigger}
                 >

@@ -8,7 +8,7 @@ describe('articleDetailsCommentsSlice.test', () => {
             isLoading: false,
             error: 'error',
         };
-
+        // @ts-ignore
         expect(articleDetailsCommentsReducer(state as ArticleDetailsCommentsSchema, fetchCommentsByArticleId.pending))
             .toEqual({
                 isLoading: true,

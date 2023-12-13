@@ -1,4 +1,5 @@
 import {
+    EntityId,
     PayloadAction,
     createEntityAdapter,
     createSlice,
@@ -15,7 +16,7 @@ const initialState: ArticleDetailsCommentsSchema = {
     entities: {},
 };
 
-export const commentsAdapter = createEntityAdapter<Comment>({
+export const commentsAdapter = createEntityAdapter<Comment, EntityId>({
     selectId: (comment) => comment.id,
 });
 

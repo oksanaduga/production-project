@@ -3,13 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { ArticleDetails } from 'entities/Article';
 import { useParams } from 'react-router-dom';
-import { Text, TextAlign } from 'shared/ui/Text/Text';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 import { Page } from 'widgets/Page/Page';
 import { VStack } from 'shared/ui/Stack';
 import { ArticleRecommendationsList } from 'features/articleRecommendationsList';
-import cls from './ArticleDetails.module.scss';
 
 import { articleDetailsPageReducer } from '../../model/slice';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
@@ -25,17 +23,6 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const reducers: ReducersList = {
         articleDetailsPage: articleDetailsPageReducer,
     };
-
-    if (!id) {
-        return (
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <Text
-                    text={t('articleNotFound')}
-                    align={TextAlign.CENTER}
-                />
-            </div>
-        );
-    }
 
     return (
         <DynamicModuleLoader

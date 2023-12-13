@@ -22,7 +22,7 @@ import { EditableProfileCardHeader } from '../EditableProfileCardHeader/Editable
 
 interface EditableProfileCardProps {
     className?: string;
-    id: string;
+    id?: string;
 }
 
 export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
@@ -86,6 +86,14 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     const onChangeCountry = useCallback((country: Country) => {
         dispatch(profileActions.updateProfile({ country }));
     }, [dispatch]);
+
+    if (error) {
+        return (
+            <Text
+                title={t('profileLoadingError')}
+            />
+        );
+    }
 
     return (
         <DynamicModuleLoader
