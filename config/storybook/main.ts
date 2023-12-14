@@ -6,7 +6,6 @@ module.exports = {
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
-        'storybook-addon-react-router-v6',
         'storybook-addon-mock',
     ],
     framework: '@storybook/react',
@@ -15,3 +14,4 @@ module.exports = {
     },
     staticDirs: ['../../public'],
 };
+export {};

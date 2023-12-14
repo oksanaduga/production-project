@@ -1,0 +1,12 @@
+.Popover {
+    position: relative;
+}
+
+.panel {
+    position: absolute;
+    z-index: 10000;
+    border-radius: 8px;
+    padding: 15px;
+    background: var(--card-bg);
+    cursor: pointer;
+}

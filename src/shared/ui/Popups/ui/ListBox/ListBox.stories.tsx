@@ -24,6 +24,7 @@ Normal.args = {
     onChange: () => {},
     label: 'label',
     items: options,
+    readonly: false,
 };
 
 export const ReadOnly = Template.bind({});
@@ -42,6 +43,7 @@ DirectionTopLeft.args = {
     label: 'label',
     items: options,
     direction: 'top left',
+    readonly: false,
 };
 
 export const DirectionTopRight = Template.bind({});
@@ -51,6 +53,7 @@ DirectionTopRight.args = {
     label: 'label',
     items: options,
     direction: 'top right',
+    readonly: false,
 };
 
 export const DirectionBottomLeft = Template.bind({});
@@ -60,6 +63,7 @@ DirectionBottomLeft.args = {
     label: 'label',
     items: options,
     direction: 'bottom left',
+    readonly: false,
 };
 
 export const DirectionBottomRight = Template.bind({});
@@ -69,4 +73,5 @@ DirectionBottomRight.args = {
     label: 'label',
     items: options,
     direction: 'bottom right',
+    readonly: false,
 };
