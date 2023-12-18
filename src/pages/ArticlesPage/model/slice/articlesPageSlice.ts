@@ -6,10 +6,10 @@ import {
 } from '@reduxjs/toolkit';
 import {
     Article, ArticleSortField, ArticleType, ArticleView,
-} from 'entities/Article';
-import { StateSchema } from 'app/providers/StoreProvider';
-import { ARTICLES_VIEW_LOCAL_STORAGE_KEY } from 'app/consts/consts';
-import { SortOrder } from 'shared/types';
+} from '@/entities/Article';
+import { StateSchema } from '@/app/providers/StoreProvider';
+import { ARTICLES_VIEW_LOCAL_STORAGE_KEY } from '@/app/consts/consts';
+import { SortOrder } from '@/shared/types';
 import { ArticlesPageSchema } from '../types/articlesPage';
 import { fetchArticlesList } from '../services/fetchArticleList/fetchArticlesList';
 

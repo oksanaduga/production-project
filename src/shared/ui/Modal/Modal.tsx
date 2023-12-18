@@ -1,10 +1,10 @@
-import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import React, {
     ReactNode,
 } from 'react';
-import { ANIMATION_DELAY } from 'app/consts/consts';
-import { useTheme } from 'app/providers/ThemeProvider';
-import { useModal } from 'shared/lib/hooks/useModal/useModal';
+import { Mods, classNames } from '@/shared/lib/classNames/classNames';
+import { ANIMATION_DELAY } from '@/app/consts/consts';
+import { useTheme } from '@/app/providers/ThemeProvider';
+import { useModal } from '@/shared/lib/hooks/useModal/useModal';
 import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
 import { Overlay } from '../Overlay/Overlay';

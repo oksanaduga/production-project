@@ -1,5 +1,5 @@
 import React, { ErrorInfo, ReactNode, Suspense } from 'react';
-import { ErrorPage } from 'widgets/ErrorPage';
+import { ErrorPage } from '@/widgets/ErrorPage';
 
 // hoc для того чтобы использовать интернационализацию в классовом комп
 // import { withTranslation } from 'react-i18next';

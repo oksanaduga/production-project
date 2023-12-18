@@ -1,6 +1,7 @@
-import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { initeArticlesPage } from '../initeArticlesPage/initeArticlesPage';
 import { fetchArticlesList } from '../fetchArticleList/fetchArticlesList';
+// import { ArticleView } from '@/entities/Article';
 
 jest.mock('../fetchArticleList/fetchArticlesList');
 
@@ -10,6 +11,7 @@ describe('initeArticlesPage.test', () => {
             articlesPage: {
                 _inited: false,
                 page: 1,
+                // view: ArticleView.SMALL,
             },
         });
 
@@ -24,6 +26,7 @@ describe('initeArticlesPage.test', () => {
             articlesPage: {
                 _inited: true,
                 page: 1,
+                // view: ArticleView.SMALL,
             },
         });
 

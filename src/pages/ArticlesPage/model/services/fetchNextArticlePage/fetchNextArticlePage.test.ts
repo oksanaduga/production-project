@@ -1,4 +1,4 @@
-import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { fetchNextArticlePage } from './fetchNextArticlePage';
 import { fetchArticlesList } from '../fetchArticleList/fetchArticlesList';
 
@@ -8,12 +8,12 @@ describe('fetchNextArticlePage.test', () => {
     test('succes', async () => {
         const thunk = new TestAsyncThunk(fetchNextArticlePage, {
             articlesPage: {
-                hasMore: true,
                 page: 2,
-                isLoading: false,
-                limit: 5,
                 ids: [],
                 entities: {},
+                limit: 5,
+                isLoading: false,
+                hasMore: true,
             },
         });
 
@@ -26,12 +26,12 @@ describe('fetchNextArticlePage.test', () => {
     test('fetchArticle not called', async () => {
         const thunk = new TestAsyncThunk(fetchNextArticlePage, {
             articlesPage: {
-                hasMore: false,
                 page: 2,
-                isLoading: false,
-                limit: 5,
                 ids: [],
                 entities: {},
+                limit: 5,
+                isLoading: false,
+                hasMore: false,
             },
         });
 

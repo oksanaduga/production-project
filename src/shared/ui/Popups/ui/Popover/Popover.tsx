@@ -1,6 +1,6 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { ReactNode, memo } from 'react';
 import { Popover as HPopover } from '@headlessui/react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Popover.module.scss';
 import popupCls from '../../styles/popup.module.scss';
 import { DropdownDirection } from '../../../../types/ui';

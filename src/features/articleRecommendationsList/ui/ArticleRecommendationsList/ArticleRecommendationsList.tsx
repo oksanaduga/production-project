@@ -1,10 +1,10 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
-import { Text, TextSize } from 'shared/ui/Text/Text';
-import { ArticleList } from 'entities/Article';
-import { VStack } from 'shared/ui/Stack';
-import { ARTICLE_LIST_LIMIT } from 'app/consts/consts';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text, TextSize } from '@/shared/ui/Text/Text';
+import { ArticleList } from '@/entities/Article';
+import { VStack } from '@/shared/ui/Stack';
+import { ARTICLE_LIST_LIMIT } from '@/app/consts/consts';
 import { useArticlesRecommendationsList } from '../../api/articleRecommendationsApi';
 
 interface ArticleRecommendationsListProps {
