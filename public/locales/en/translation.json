@@ -23,5 +23,8 @@
   "createArticle": "Create article",
   "userProfile": "Profile",
   "admin": "Admin",
-  "accessDenied": "You do not have access to this page"
+  "accessDenied": "You do not have access to this page",
+  "feedback": "Feedback",
+  "cancel": "Cancel",
+  "send": "Send"
 }
