@@ -53,6 +53,7 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'duga-plugin/path-checker': ['error', { alias: '@' }],
+        'duga-plugin/public-import-api': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,
