@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { USER_LOCAL_STORAGE_KEY } from '@/app/consts/consts';
+import { USER_LOCAL_STORAGE_KEY } from '../const/localStorage';
 
 // Define a service using a base URL and expected endpoints
 export const rtkApi = createApi({

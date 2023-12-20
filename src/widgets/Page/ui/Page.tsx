@@ -10,7 +10,7 @@ import { UIActions, getUIScrollByPath } from '@/features/ui';
 import { useInitialLayoutEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
-import { PAGE_ID } from '@/app/consts/consts';
+import { PAGE_ID } from '@/shared/const/consts';
 import cls from './Page.module.scss';
 
 interface PageProps {

@@ -4,8 +4,8 @@ import {
 import { Routes, Route } from 'react-router-dom';
 import {
     routeConfig,
-} from '@/app/providers/router/config/routeConfig';
-import { PageLoader } from '@/widgets/PageLoader';
+} from '../../router/config/routeConfig';
+import { PageLoader } from '@/shared/ui/PageLoader';
 import { RequireAuth } from './RequireAuth';
 import { RequireRoles } from './RequireRoles';
 import { RoutePath } from '@/shared/const/router';
