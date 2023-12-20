@@ -9,5 +9,7 @@
     "recommend": "Recommend",
     "editArticle": "Edit",
     "editArticlePage": "Edit article id=",
-    "createArticlePage": "Create article"
+    "createArticlePage": "Create article",
+    "rateArticle": "Rate article",
+    "writeFeedback": "Write feedback"
 }

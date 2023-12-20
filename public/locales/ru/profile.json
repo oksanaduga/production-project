@@ -17,5 +17,6 @@
     "incorrectCountry": "Некорректноуказан регион",
     "requiredUserData": "Имя и фамилия обязательны для заполнения",
     "requiredData": "Данные не указаны",
-    "serverError": "Серверная ошибка"
+    "serverError": "Серверная ошибка",
+    "rateProfile": "Оцените профиль"
 }

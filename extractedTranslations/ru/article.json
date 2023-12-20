@@ -5,6 +5,8 @@
   "editArticle": "editArticle",
   "editArticlePage": "editArticlePage",
   "notFoundArticles": "notFoundArticles",
+  "rateArticle": "rateArticle",
   "readMore": "readMore",
-  "unexpectedError": "unexpectedError"
+  "unexpectedError": "unexpectedError",
+  "writeFeedback": "writeFeedback"
 }

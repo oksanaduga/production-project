@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './RaitingCard.module.scss';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text/Text';
 import { StarRating } from '@/shared/ui/StarRating/StarRating';
@@ -15,10 +14,11 @@ import { Drawer } from '@/shared/ui/Drawer/Drawer';
 interface RaitingCardProps {
     className?: string;
     title?: string;
-    feedbackTitle: string;
+    feedbackTitle?: string;
     hasFeedback?: boolean;
     onCancel?: (starsCount: number) => void;
     onAccept?: (starsCount: number, feedback?: string) => void;
+    rate?: number;
 }
 export const RaitingCard = memo((props: RaitingCardProps) => {
     const {
@@ -28,10 +28,11 @@ export const RaitingCard = memo((props: RaitingCardProps) => {
         hasFeedback,
         onCancel,
         onAccept,
+        rate = 0,
     } = props;
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [starsCount, setStarsCount] = useState(0);
+    const [starsCount, setStarsCount] = useState(rate ?? 0);
     const [feedback, setFeedback] = useState('');
 
     const { t } = useTranslation();
@@ -67,10 +68,12 @@ export const RaitingCard = memo((props: RaitingCardProps) => {
         </>
     );
 
+    const rateTitle = starsCount ? t('thanksForFeedback') : title;
+
     return (
-        <Card className={classNames(cls.RaitingCard, {}, [className])}>
+        <Card className={classNames('', {}, [className])} max>
             <VStack align="center" gap="8">
-                <Text title={title} />
+                <Text title={rateTitle} />
                 <StarRating
                     size={40}
                     onSelect={onSelectStars}

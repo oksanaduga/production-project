@@ -13,7 +13,7 @@ const notification: Notification = {
 };
 
 export default {
-    title: 'entities/NotificationList',
+    title: 'entities/Notification/NotificationList',
     component: NotificationList,
     decorators: [withMock],
 } as ComponentMeta<typeof NotificationList>;

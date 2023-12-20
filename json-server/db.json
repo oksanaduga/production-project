@@ -724,6 +724,75 @@
       "city": "Moscow",
       "username": "ivan",
       "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
+    },
+    {
+      "id": "3",
+      "first": "ivan",
+      "lastname": "ivanov",
+      "age": 20,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "ivan"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "super",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "super",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 2,
+      "feedback": "",
+      "id": "JiBtaRb"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 5,
+      "feedback": "qwe",
+      "id": "fXuE3CR"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 4,
+      "feedback": "",
+      "id": "xulmxOv"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "super",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "super",
+      "userId": "1",
+      "profileId": "2"
+    },
+    {
+      "userId": "1",
+      "profileId": "3",
+      "rate": 1,
+      "id": "5rTCRuj"
     }
   ]
 }

@@ -17,5 +17,6 @@
     "incorrectCountry": "Incorrect country",
     "requiredUserData": "User data required",
     "requiredData": "data required",
-    "serverError": "Server error"
+    "serverError": "Server error",
+    "rateProfile": "Rate profile"
 }

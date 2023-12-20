@@ -12,6 +12,7 @@ import { ArticleRecommendationsList } from '@/features/articleRecommendationsLis
 import { articleDetailsPageReducer } from '../../model/slice';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
+import { ArticleRating } from '@/features/articleRating';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -23,6 +24,10 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const reducers: ReducersList = {
         articleDetailsPage: articleDetailsPageReducer,
     };
+
+    if (!id) {
+        return null;
+    }
 
     return (
         <DynamicModuleLoader
@@ -37,6 +42,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                 >
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
+                    <ArticleRating articleId={id} />
                     <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>

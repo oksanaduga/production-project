@@ -26,5 +26,6 @@
   "accessDenied": "You do not have access to this page",
   "feedback": "Feedback",
   "cancel": "Cancel",
-  "send": "Send"
+  "send": "Send",
+  "thanksForFeedback": "Thanks for feedback"
 }

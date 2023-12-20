@@ -57,6 +57,7 @@
   "send": "send",
   "serverError": "serverError",
   "sortBy": "sortBy",
+  "thanksForFeedback": "thanksForFeedback",
   "throw error": "throw error",
   "throwError": "throwError",
   "unexpectedError": "unexpectedError",

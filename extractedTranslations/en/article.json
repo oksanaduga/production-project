@@ -7,7 +7,9 @@
   "editArticle": "",
   "editArticlePage": "",
   "notFoundArticles": "",
+  "rateArticle": "",
   "readMore": "",
   "recommend": "",
-  "unexpectedError": ""
+  "unexpectedError": "",
+  "writeFeedback": ""
 }

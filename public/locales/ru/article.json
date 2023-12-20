@@ -9,5 +9,7 @@
     "recommend": "Рекомендуем",
     "editArticle": "Редактировать",
     "editArticlePage": "Редактирование статьи id=",
-    "createArticlePage": "Создание статьи"
+    "createArticlePage": "Создание статьи",
+    "rateArticle": "Оцените статью",
+    "writeFeedback": "Оставьте отзыв"
 }
