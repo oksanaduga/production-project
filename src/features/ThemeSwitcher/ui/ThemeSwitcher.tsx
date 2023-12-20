@@ -4,7 +4,7 @@ import { Theme } from '@/shared/const/theme';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import LightIcon from '@/shared/assets/icons/theme-light.svg?react';
 import DarkIcon from '@/shared/assets/icons/theme-dark.svg?react';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
 
 interface ThemeSwitcherProps {
     className?: string;

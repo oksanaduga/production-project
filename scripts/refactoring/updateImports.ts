@@ -1,4 +1,5 @@
 import { Project } from 'ts-morph';
+import { isAbsolute } from './helpers';
 
 const project = new Project();
 
@@ -6,16 +7,6 @@ project.addSourceFilesAtPaths('src/**/*.ts');
 project.addSourceFilesAtPaths('src/**/*.tsx');
 
 const files = project.getSourceFiles();
-
-function isAbsolute(value: string) {
-    const layers = ['entities', 'pages', 'widgets', 'shared', 'app', 'features'];
-
-    if (layers.some((layer) => value.startsWith(layer))) {
-        return true;
-    }
-
-    return false;
-}
 
 files.forEach((sourceFile) => {
     const importDeclarations = sourceFile.getImportDeclarations();

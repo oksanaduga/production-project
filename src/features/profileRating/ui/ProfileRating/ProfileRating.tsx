@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { RaitingCard } from '@/entities/Raiting';
 import { useProfileRating, useRateProfile } from '../../api/profileRatingApi';
 import { getUserAuthData } from '@/entities/User';
-import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
+import { Skeleton } from '@/shared/ui/Skeleton';
 
 interface ProfileRatingProps {
     className?: string;
