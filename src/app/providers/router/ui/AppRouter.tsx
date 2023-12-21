@@ -8,7 +8,7 @@ import {
 import { PageLoader } from '@/shared/ui/PageLoader';
 import { RequireAuth } from './RequireAuth';
 import { RequireRoles } from './RequireRoles';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteForbidden } from '@/shared/const/router';
 import { AppRoutesProps } from '@/shared/types/router';
 
 const AppRouter = () => {
@@ -26,7 +26,7 @@ const AppRouter = () => {
             if (route.authOnly) {
                 return (<RequireAuth>{element}</RequireAuth>);
             }
-            if (route.path === RoutePath.forbidden) {
+            if (route.path === getRouteForbidden()) {
                 return (<RequireAuth>{element}</RequireAuth>);
             }
             return element;
