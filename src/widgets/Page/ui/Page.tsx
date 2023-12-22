@@ -12,14 +12,20 @@ import { StateSchema } from '@/app/providers/StoreProvider';
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
 import { PAGE_ID } from '@/shared/const/consts';
 import cls from './Page.module.scss';
+import { TestProps } from '@/shared/types/tests';
 
-interface PageProps {
+interface PageProps extends TestProps {
     className?: string;
     children: ReactNode;
     onScrollEnd?: () => void;
 }
 export const Page = (props: PageProps) => {
-    const { className, children, onScrollEnd } = props;
+    const {
+        className,
+        children,
+        onScrollEnd,
+        'data-testid': dataTestId = 'Page',
+    } = props;
     const wrapperRef = useRef() as MutableRefObject<HTMLElement>;
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
     const dispatch = useAppDispatch();
@@ -49,6 +55,7 @@ export const Page = (props: PageProps) => {
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScroll}
             id={PAGE_ID}
+            data-testid={dataTestId}
         >
             {children}
             {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}

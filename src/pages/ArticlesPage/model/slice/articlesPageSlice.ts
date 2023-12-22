@@ -9,7 +9,7 @@ import {
 } from '@/entities/Article';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { ARTICLES_VIEW_LOCAL_STORAGE_KEY } from '@/shared/const/localStorage';
-import { SortOrder } from '@/shared/types';
+import { SortOrder } from '@/shared/types/sort';
 import { ArticlesPageSchema } from '../types/articlesPage';
 import { fetchArticlesList } from '../services/fetchArticleList/fetchArticlesList';
 
