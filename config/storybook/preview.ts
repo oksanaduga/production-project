@@ -1,4 +1,3 @@
-import { addDecorator } from '@storybook/react';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { TranslationDecorator } from '../../src/shared/config/storybook/TranslationDecorator/TranslationDecorator';
@@ -26,8 +25,18 @@ export const parameters = {
     },
 };
 
-addDecorator(StyleDecorator);
-addDecorator(TranslationDecorator);
-addDecorator(ThemeDecorator(Theme.LIGHT));
-addDecorator(RouterDecorator);
-addDecorator(SuspenseDecorator);
+export default {
+    decorators: [
+        StyleDecorator,
+        TranslationDecorator,
+        ThemeDecorator(Theme.LIGHT),
+        RouterDecorator,
+        SuspenseDecorator,
+    ],
+};
+
+// addDecorator(StyleDecorator);
+// addDecorator(TranslationDecorator);
+// addDecorator(ThemeDecorator(Theme.LIGHT));
+// addDecorator(RouterDecorator);
+// addDecorator(SuspenseDecorator);
