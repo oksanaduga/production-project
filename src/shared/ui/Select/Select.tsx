@@ -5,13 +5,14 @@ import {
 import { Mods, classNames } from '@/shared/lib/classNames/classNames';
 
 import cls from './Select.module.scss';
+import { TestProps } from '@/shared/types/tests';
 
 export interface SelectOption<T extends string> {
     value: T;
     content: T;
 }
 
-interface SelectProps<T extends string> {
+interface SelectProps<T extends string> extends TestProps {
     className?: string;
     label?: string;
     options?: SelectOption<T>[];
@@ -27,6 +28,7 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
         value,
         onChange,
         readonly,
+        'data-testid': dataTestId = 'Select',
     } = props;
 
     const optionList = useMemo(() => options?.map((opt) => (
@@ -57,6 +59,7 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
                 className={cls.select}
                 value={value}
                 onChange={onChangeHandler}
+                data-testid={dataTestId}
             >
                 {optionList}
             </select>

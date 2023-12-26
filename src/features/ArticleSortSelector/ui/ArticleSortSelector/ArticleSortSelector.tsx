@@ -60,6 +60,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
                 onChange={onChangeSort}
             /> */}
             <Select
+                data-testid="ArticleSortSelector.views"
                 label={t('sortBy')}
                 options={sortFieldOptions}
                 value={sort}

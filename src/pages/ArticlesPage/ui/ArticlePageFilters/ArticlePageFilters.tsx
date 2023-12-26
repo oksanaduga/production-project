@@ -25,6 +25,7 @@ import cls from './ArticlePageFilters.module.scss';
 import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
 import { ArticleViewSelector } from '@/features/ArticleViewSelector';
 import { ArticleSortSelector } from '@/features/ArticleSortSelector';
+import { classNames } from '@/shared/lib/classNames/classNames';
 
 interface ArticlePageFiltersProps {
     className?: string;
@@ -76,7 +77,7 @@ export const ArticlePageFilters = memo((props: ArticlePageFiltersProps) => {
     }, [dispatch, fetchData]);
 
     return (
-        <>
+        <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
             <HStack
                 max
                 justify="between"
@@ -104,6 +105,6 @@ export const ArticlePageFilters = memo((props: ArticlePageFiltersProps) => {
                 onChangeType={onChangeType}
                 className={cls.tabs}
             />
-        </>
+        </div>
     );
 });

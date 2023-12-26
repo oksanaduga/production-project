@@ -19,8 +19,9 @@ import {
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { AppImage } from '@/shared/ui/AppImage';
 import { Skeleton } from '@/shared/ui/Skeleton';
+import { TestProps } from '@/shared/types/tests';
 
-interface ArticleListItemProps {
+interface ArticleListItemProps extends TestProps {
     className?: string;
     article: Article;
     view?: ArticleView;
@@ -32,6 +33,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         article,
         view = ArticleView.SMALL,
         target,
+        'data-testid': dataTestId = 'ArticleListItem',
     } = props;
 
     // const [isHover, bindHover] = useHover();
@@ -42,7 +44,11 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     const types = <Text text={article.type.join(', ')} className={cls.types} />;
     const views = (
         <>
-            <Text text={String(article.views)} className={cls.views} />
+            <Text
+                text={String(article.views)}
+                className={cls.views}
+                data-testid="ArticleListItem.views"
+            />
             <Icon Svg={EyeIcon} />
         </>
     );
@@ -51,7 +57,10 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         const textBlock = article.blocks.find((block) => block.type === ArticleBlockType.TEXT) as ArticleTextBlock;
 
         return (
-            <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
+            <div
+                className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+                data-testid={dataTestId}
+            >
                 <Card>
                     <div className={cls.header}>
                         <Avatar size={30} src={article.user.avatar} />
@@ -96,6 +105,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             to={getRouteArticleDetails(article.id)}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
             target={target}
+            data-testid={dataTestId}
         >
             <Card>
                 <div className={cls.imageWrapper}>
