@@ -8,6 +8,17 @@ describe('User go to article list page', () => {
         cy.getByTestId('ArticleList').should('exist');
         cy.getByTestId('ArticleListItem0').should('exist');
     });
+    it('articles on stub (fixtures)', () => {
+        cy.intercept('GET', '**/articles?*', { fixture: 'articles.json' });
+
+        // пример автоматизированной фикстуры
+        // cy.intercept('GET', '**/articles?*', (req) => {
+        //     req.method
+        // });
+
+        cy.getByTestId('ArticleList').should('exist');
+        cy.getByTestId('ArticleListItem0').should('exist');
+    });
     it('articles sort', () => {
         cy.getByTestId('ArticleSortSelector.views').select('views');
 
@@ -20,5 +31,8 @@ describe('User go to article list page', () => {
             const last = Number(text);
             expect(last).to.be.greaterThan(first);
         });
+    });
+    it.skip('example skip test', () => {
+        cy.get('asd').should('exist');
     });
 });
