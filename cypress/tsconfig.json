@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "jsx": "react",
         "target": "es5",
         "lib": ["es5", "dom"],
         "types": ["cypress", "node"],
@@ -7,5 +8,5 @@
         "isolatedModules": true, // false
     },
     "extebds": "../ts.config.json",
-    "include": ["**/*.ts"]
+    "include": ["**/*.ts", "**/*.tsx"]
 }
