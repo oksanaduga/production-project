@@ -3,14 +3,16 @@ import { fetchCommentsByArticleId } from './fetchCommentsByArticleId';
 
 describe('fetchCommentsByArticleId.test', () => {
     test('succes', async () => {
-        const data = [{
-            id: '1',
-            user: {
+        const data = [
+            {
                 id: '1',
-                username: 'ivan',
+                user: {
+                    id: '1',
+                    username: 'ivan',
+                },
+                text: 'text',
             },
-            text: 'text',
-        }];
+        ];
 
         const thunk = new TestAsyncThunk(fetchCommentsByArticleId);
         thunk.api.get.mockReturnValue(Promise.resolve({ data }));

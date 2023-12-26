@@ -1,5 +1,8 @@
 import { StateSchema } from '@/app/providers/StoreProvider';
-import { getArticleDetailsCommentsError, getArticleDetailsCommentsIsLoading } from './comments';
+import {
+    getArticleDetailsCommentsError,
+    getArticleDetailsCommentsIsLoading,
+} from './comments';
 
 describe('getArticleDetailsData', () => {
     test('should return is loading', () => {
@@ -11,12 +14,16 @@ describe('getArticleDetailsData', () => {
             },
         };
 
-        expect(getArticleDetailsCommentsIsLoading(state as StateSchema)).toBe(false);
+        expect(getArticleDetailsCommentsIsLoading(state as StateSchema)).toBe(
+            false,
+        );
     });
     test('should work with empty state', () => {
         const state: DeepPartial<StateSchema> = {};
 
-        expect(getArticleDetailsCommentsIsLoading(state as StateSchema)).toBe(false);
+        expect(getArticleDetailsCommentsIsLoading(state as StateSchema)).toBe(
+            false,
+        );
     });
     test('should return error', () => {
         const state: DeepPartial<StateSchema> = {
@@ -27,11 +34,15 @@ describe('getArticleDetailsData', () => {
             },
         };
 
-        expect(getArticleDetailsCommentsError(state as StateSchema)).toBe('true');
+        expect(getArticleDetailsCommentsError(state as StateSchema)).toBe(
+            'true',
+        );
     });
     test('should work with empty state', () => {
         const state: DeepPartial<StateSchema> = {};
 
-        expect(getArticleDetailsCommentsError(state as StateSchema)).toEqual(undefined);
+        expect(getArticleDetailsCommentsError(state as StateSchema)).toEqual(
+            undefined,
+        );
     });
 });

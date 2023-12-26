@@ -5,7 +5,7 @@ export const useInitialEffect = (cb: () => void) => {
         if (__PROJECT__ !== 'storybook' && __PROJECT__ !== 'jest') {
             cb();
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 };
 
@@ -14,6 +14,6 @@ export const useInitialLayoutEffect = (cb: () => void) => {
         if (__PROJECT__ !== 'storybook' && __PROJECT__ !== 'jest') {
             cb();
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 };

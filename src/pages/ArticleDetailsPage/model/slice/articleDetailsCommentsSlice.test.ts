@@ -8,42 +8,52 @@ describe('articleDetailsCommentsSlice.test', () => {
             isLoading: false,
             error: 'error',
         };
-        // @ts-ignore
-        expect(articleDetailsCommentsReducer(state as ArticleDetailsCommentsSchema, fetchCommentsByArticleId.pending))
-            .toEqual({
-                isLoading: true,
-                error: undefined,
-            });
+        expect(
+            articleDetailsCommentsReducer(
+                state as ArticleDetailsCommentsSchema,
+                 // @ts-ignore
+                fetchCommentsByArticleId.pending,
+            ),
+        ).toEqual({
+            isLoading: true,
+            error: undefined,
+        });
     });
     test('test articleDetailsComments fulfilled', () => {
-        const data = [{
-            id: '1',
-            user: {
+        const data = [
+            {
                 id: '1',
-                username: 'ivan',
+                user: {
+                    id: '1',
+                    username: 'ivan',
+                },
+                text: 'text',
             },
-            text: 'text',
-        }];
+        ];
 
         const state: DeepPartial<ArticleDetailsCommentsSchema> = {
             isLoading: true,
         };
 
-        expect(articleDetailsCommentsReducer(state as ArticleDetailsCommentsSchema, fetchCommentsByArticleId.fulfilled(data, '', '')))
-            .toEqual({
-                isLoading: false,
-                error: undefined,
-                ids: ['1'],
-                entities: {
-                    1: {
+        expect(
+            articleDetailsCommentsReducer(
+                state as ArticleDetailsCommentsSchema,
+                fetchCommentsByArticleId.fulfilled(data, '', ''),
+            ),
+        ).toEqual({
+            isLoading: false,
+            error: undefined,
+            ids: ['1'],
+            entities: {
+                1: {
+                    id: '1',
+                    user: {
                         id: '1',
-                        user: {
-                            id: '1',
-                            username: 'ivan',
-                        },
-                        text: 'text',
+                        username: 'ivan',
                     },
+                    text: 'text',
                 },
-            });
+            },
+        });
     });
 });

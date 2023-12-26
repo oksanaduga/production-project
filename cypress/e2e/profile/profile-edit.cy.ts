@@ -19,6 +19,9 @@ describe('user go to the profile page', () => {
         cy.updateProfile(newName, newLastName);
 
         cy.getByTestId('ProfileCard.firstname').should('have.value', newName);
-        cy.getByTestId('ProfileCard.lastname').should('have.value', newLastName);
+        cy.getByTestId('ProfileCard.lastname').should(
+            'have.value',
+            newLastName,
+        );
     });
 });

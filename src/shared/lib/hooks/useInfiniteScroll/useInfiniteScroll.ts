@@ -6,7 +6,11 @@ export interface UseInfiniteScrollOptions {
     wrapperRef: MutableRefObject<HTMLElement>;
 }
 
-export const useInfiniteScroll = ({ callback, triggerRef, wrapperRef }: UseInfiniteScrollOptions) => {
+export const useInfiniteScroll = ({
+    callback,
+    triggerRef,
+    wrapperRef,
+}: UseInfiniteScrollOptions) => {
     // eslint-disable-next-line consistent-return
     useEffect(() => {
         let observer: IntersectionObserver | null = null;

@@ -10,12 +10,16 @@ describe('articleDetailsSlice.test', () => {
             isLoading: false,
             error: 'error',
         };
-        // @ts-ignore
-        expect(articleDetailsReducer(state as ArticleDetailsSchema, fetchArticleById.pending))
-            .toEqual({
-                isLoading: true,
-                error: undefined,
-            });
+        expect(
+            articleDetailsReducer(
+                state as ArticleDetailsSchema,
+                // @ts-ignore
+                fetchArticleById.pending,
+            ),
+        ).toEqual({
+            isLoading: true,
+            error: undefined,
+        });
     });
     test('test articleDetails fulfilled', () => {
         const data: Article = {
@@ -47,10 +51,14 @@ describe('articleDetailsSlice.test', () => {
             isLoading: true,
         };
 
-        expect(articleDetailsReducer(state as ArticleDetailsSchema, fetchArticleById.fulfilled(data, '', '')))
-            .toEqual({
-                isLoading: false,
-                data,
-            });
+        expect(
+            articleDetailsReducer(
+                state as ArticleDetailsSchema,
+                fetchArticleById.fulfilled(data, '', ''),
+            ),
+        ).toEqual({
+            isLoading: false,
+            data,
+        });
     });
 });

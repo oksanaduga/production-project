@@ -15,4 +15,5 @@ const recommendationsApi = rtkApi.injectEndpoints({
     }),
 });
 
-export const useArticlesRecommendationsList = recommendationsApi.useGetArticleRecommendationsListQuery;
+export const useArticlesRecommendationsList =
+    recommendationsApi.useGetArticleRecommendationsListQuery;

@@ -20,13 +20,19 @@ export const recommendationsAdapter = createEntityAdapter<Article, EntityId>({
     selectId: (article) => article.id,
 });
 
-export const getArticleRecommendations = recommendationsAdapter.getSelectors<StateSchema>(
-    (state) => state.articleDetailsPage?.recommendations || recommendationsAdapter.getInitialState(),
-);
+export const getArticleRecommendations =
+    recommendationsAdapter.getSelectors<StateSchema>(
+        (state) =>
+            state.articleDetailsPage?.recommendations ||
+            recommendationsAdapter.getInitialState(),
+    );
 
 export const articleDetailsPageRecomendationsSlice = createSlice({
     name: 'articleDetailsPageRecomendationsSlice',
-    initialState: recommendationsAdapter.getInitialState<ArticleDetailsPageRecomendationsSchema>(initialState),
+    initialState:
+        recommendationsAdapter.getInitialState<ArticleDetailsPageRecomendationsSchema>(
+            initialState,
+        ),
     reducers: {},
     extraReducers: (builder) => {
         builder
@@ -34,10 +40,13 @@ export const articleDetailsPageRecomendationsSlice = createSlice({
                 state.error = undefined;
                 state.isLoading = true;
             })
-            .addCase(fetchArticlesRecommendations.fulfilled, (state, action: PayloadAction<Article[]>) => {
-                state.isLoading = false;
-                recommendationsAdapter.setAll(state, action.payload);
-            })
+            .addCase(
+                fetchArticlesRecommendations.fulfilled,
+                (state, action: PayloadAction<Article[]>) => {
+                    state.isLoading = false;
+                    recommendationsAdapter.setAll(state, action.payload);
+                },
+            )
             .addCase(fetchArticlesRecommendations.rejected, (state, action) => {
                 state.error = action.payload;
                 state.isLoading = false;
@@ -45,6 +54,5 @@ export const articleDetailsPageRecomendationsSlice = createSlice({
     },
 });
 
-export const {
-    reducer: articleDetailsPageRecomendationsReducer,
-} = articleDetailsPageRecomendationsSlice;
+export const { reducer: articleDetailsPageRecomendationsReducer } =
+    articleDetailsPageRecomendationsSlice;

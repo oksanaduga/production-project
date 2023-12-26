@@ -23,14 +23,20 @@ describe('User go to article list page', () => {
         cy.getByTestId('ArticleSortSelector.views').select('views');
 
         let first;
-        cy.getByTestId('ArticleListItem.views.Paragraph').first().invoke('text').then((text) => {
-            first = Number(text);
-        });
+        cy.getByTestId('ArticleListItem.views.Paragraph')
+            .first()
+            .invoke('text')
+            .then((text) => {
+                first = Number(text);
+            });
 
-        cy.getByTestId('ArticleListItem.views.Paragraph').last().invoke('text').then((text) => {
-            const last = Number(text);
-            expect(last).to.be.greaterThan(first);
-        });
+        cy.getByTestId('ArticleListItem.views.Paragraph')
+            .last()
+            .invoke('text')
+            .then((text) => {
+                const last = Number(text);
+                expect(last).to.be.greaterThan(first);
+            });
     });
     it.skip('example skip test', () => {
         cy.get('asd').should('exist');

@@ -3,5 +3,5 @@ import { ArticleDetailsPageRecomendationsSchema } from './ArticleDetailsPageReco
 
 export interface ArticleDetailsePageSchema {
     comments: ArticleDetailsCommentsSchema;
-    recommendations: ArticleDetailsPageRecomendationsSchema
+    recommendations: ArticleDetailsPageRecomendationsSchema;
 }

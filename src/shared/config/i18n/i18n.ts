@@ -36,12 +36,11 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 // export default i18next;
 
-i18n
-    .use(Backend)
+i18n.use(Backend)
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-    // lng: 'en',
+        // lng: 'en',
         fallbackLng: 'en',
         // debug: __IS_DEV__,
         debug: false,
