@@ -3,10 +3,19 @@ const jsonServer = require('json-server');
 const path = require('path');
 const https = require('node:https');
 
+// const options = {
+//     key: fs.readFileSync(path.resolve(__dirname, 'key.pem')),
+//     cert: fs.readFileSync(path.resolve(__dirname, 'cert.pem')),
+// };
+
 const options = {
-    key: fs.readFileSync(path.resolve(__dirname, 'key.pem')),
-    cert: fs.readFileSync(path.resolve(__dirname, 'cert.pem')),
-};
+    key: fs.readFileSync(
+        path.resolve(__dirname, '/etc/letsencrypt/live/deploytrain.ru/privkey.pem')
+    ),
+    cert: fs.readFileSync(
+        path.resolve(__dirname, '/etc/letsencrypt/live/deploytrain.ru/fullchain.pem')
+    ),
+}
 
 const server = jsonServer.create();
 
