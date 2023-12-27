@@ -1,7 +1,7 @@
 const fs = require('fs');
 const jsonServer = require('json-server');
 const path = require('path');
-const https = require('node:https'); 
+const https = require('node:https');
 
 const options = {
     key: fs.readFileSync(path.resolve(__dirname, 'key.pem')),
