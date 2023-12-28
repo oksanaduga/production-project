@@ -2,20 +2,21 @@ const fs = require('fs');
 const jsonServer = require('json-server');
 const path = require('path');
 const https = require('node:https');
-
-// const options = {
-//     key: fs.readFileSync(path.resolve(__dirname, 'key.pem')),
-//     cert: fs.readFileSync(path.resolve(__dirname, 'cert.pem')),
-// };
+const http = require('http');
 
 const options = {
-    key: fs.readFileSync(
-        path.resolve(__dirname, '/etc/letsencrypt/live/deploytrain.ru/privkey.pem')
-    ),
-    cert: fs.readFileSync(
-        path.resolve(__dirname, '/etc/letsencrypt/live/deploytrain.ru/fullchain.pem')
-    ),
-}
+    key: fs.readFileSync(path.resolve(__dirname, 'key.pem')),
+    cert: fs.readFileSync(path.resolve(__dirname, 'cert.pem')),
+};
+
+// const options = {
+//     key: fs.readFileSync(
+//         path.resolve?.(__dirname, '/etc/letsencrypt/live/deploytrain.ru/privkey.pem')
+//     ),
+//     cert: fs.readFileSync(
+//         path.resolve?.(__dirname, '/etc/letsencrypt/live/deploytrain.ru/fullchain.pem')
+//     ) ?? "",
+// }
 
 const server = jsonServer.create();
 
@@ -75,10 +76,16 @@ server.use((req, res, next) => {
 server.use(router);
 
 const PORT = 8443;
+const HTTP_PORT = 8000;
 
 // запуск сервера
 const httpsServer = https.createServer(options, server);
+const httpServer = http.createServer(server);
 
 httpsServer.listen(PORT, () => {
     console.log(`JSON Server is running on ${PORT}`);
+});
+
+httpServer.listen(HTTP_PORT, () => {
+    console.log(`JSON Server is running on ${HTTP_PORT}`);
 });
