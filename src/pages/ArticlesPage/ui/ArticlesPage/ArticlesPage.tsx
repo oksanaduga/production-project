@@ -2,7 +2,10 @@ import { memo, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 
@@ -15,6 +18,7 @@ import cls from './ArticlesPage.module.scss';
 import { fetchNextArticlePage } from '../../model/services/fetchNextArticlePage/fetchNextArticlePage';
 import { ArticlePageFilters } from '../ArticlePageFilters/ArticlePageFilters';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
+import { useArticleItemById } from '../../model/selectors/articlePageSelectors';
 
 interface ArticlesPageProps {
     className?: string;
@@ -23,6 +27,8 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const dispatch = useAppDispatch();
 
     const [searchParams] = useSearchParams();
+    const data = useArticleItemById('7');
+    console.log('data', data);
 
     const reducers: ReducersList = {
         articlesPage: articlesPageReducer,
