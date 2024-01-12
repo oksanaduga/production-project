@@ -3,7 +3,10 @@ import { memo } from 'react';
 import { useParams } from 'react-router-dom';
 import { ArticleDetails } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 import { Page } from '@/widgets/Page';
 import { VStack } from '@/shared/ui/Stack';
@@ -12,6 +15,8 @@ import { ArticleRecommendationsList } from '@/features/articleRecommendationsLis
 import { articleDetailsPageReducer } from '../../model/slice';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
+import { getFeatureFlags, toggleFeatures } from '@/shared/lib/features';
+import { Card } from '@/shared/ui/Card';
 import { ArticleRating } from '@/features/articleRating';
 
 interface ArticleDetailsPageProps {
@@ -19,15 +24,36 @@ interface ArticleDetailsPageProps {
 }
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { t } = useTranslation('article');
-    const { id } = useParams<{id: string}>();
+    const { id } = useParams<{ id: string }>();
 
     const reducers: ReducersList = {
         articleDetailsPage: articleDetailsPageReducer,
     };
 
+    const isArticleRatingEnabled = getFeatureFlags('isArticleRatingEnabled');
+    const isCounterEnabled = getFeatureFlags('isCoounterEnabled');
+
+    // const counter = toggleFeatures({
+    //     name: 'isCoounterEnabled',
+    //     on: () => <Counter />,
+    //     off: () => <div>qwe</div>,
+    // });
+
+    // toggleFeatures({
+    //     name: 'isCoounterEnabled',
+    //     on: () => console.log('new'),
+    //     off: () => console.log('old'),
+    // });
+
     if (!id) {
         return null;
     }
+
+    const articleRatingCard = toggleFeatures({
+        name: 'isArticleRatingEnabled',
+        on: () => <ArticleRating articleId={id} />,
+        off: () => <Card>Оценка статей скоро появится</Card>,
+    });
 
     return (
         <DynamicModuleLoader
@@ -36,13 +62,13 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
             removeAfterUnmount
         >
             <Page className={classNames('', {}, [className])}>
-                <VStack
-                    gap="16"
-                    max
-                >
+                <VStack gap="16" max>
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
-                    <ArticleRating articleId={id} />
+                    {/* {isCounterEnabled && <Counter />} */}
+                    {/* {counter} */}
+                    {/* {isArticleRatingEnabled && <ArticleRating articleId={id} />} */}
+                    {articleRatingCard}
                     <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>

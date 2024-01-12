@@ -19,6 +19,7 @@ import { fetchNextArticlePage } from '../../model/services/fetchNextArticlePage/
 import { ArticlePageFilters } from '../ArticlePageFilters/ArticlePageFilters';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import { useArticleItemById } from '../../model/selectors/articlePageSelectors';
+import { ArticlePageGreeting } from '@/features/articlePageGreeting';
 
 interface ArticlesPageProps {
     className?: string;
@@ -57,6 +58,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
                     <ArticlePageFilters />
                     <ArticleInfiniteList />
                 </VStack>
+                <ArticlePageGreeting />
             </Page>
         </DynamicModuleLoader>
     );

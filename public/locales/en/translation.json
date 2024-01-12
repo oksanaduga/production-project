@@ -27,5 +27,7 @@
   "feedback": "Feedback",
   "cancel": "Cancel",
   "send": "Send",
-  "thanksForFeedback": "Thanks for feedback"
+  "thanksForFeedback": "Thanks for feedback",
+  "welcome": "Welcome to the my train project",
+  "articlesDescription": "Here you can read, comment and estimate articles"
 }
