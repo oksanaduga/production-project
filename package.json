@@ -28,7 +28,8 @@
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "storybook:build": "storybook build -c ./config/storybook",
     "generate:slice": "node ./scripts/createSlice/index.js",
-    "postinstall": "node ./scripts/clear-cache.js"
+    "postinstall": "node ./scripts/clear-cache.js",
+    "removeFeature": "ts-node ./scripts/remove-feature.ts"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": ["prettier --list-different", "eslint"]
